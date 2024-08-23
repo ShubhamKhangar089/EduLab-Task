@@ -1,4 +1,7 @@
 ### Backend Setup For Task Managment System
+
+### Run cmd :- npm start  (./backend :- please open terminal and run this cmd);
+
 ## register-user
 ## api :- http://localhost:8080/api/v1/user/register
 
