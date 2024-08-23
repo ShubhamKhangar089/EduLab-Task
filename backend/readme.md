@@ -1,4 +1,4 @@
-
+### Backend Setup For Task Managment System
 ## register-user
 ## api :- http://localhost:8080/api/v1/user/register
 
@@ -10,7 +10,8 @@
  "password" : "12345"
   }
 
-## admin  { 
+## admin  
+{ 
   "username" : "admin",
   "email" : "admin@gmail.com",
   "password" : "12345",
@@ -30,11 +31,10 @@
 }
 ##
 
-
 ## login-user
 ## api :- http://localhost:8080/api/v1/user/login
 
-## testData :
+## body :
 ## user        
  {
  "email": "user@gmail.com",
@@ -53,7 +53,7 @@
 ## User && Admin Can Access :-
 
 ## create-new-task  api :- http://localhost:8080/api/v1/task/add
-##
+## Post-request
 body :-
 ##
 { 
@@ -68,31 +68,31 @@ response :-
 {
   "message": "Task created successfully",
   "task": {
-    "title": "Test Task 2",
-    "description": "This is a test task",
+    "title": "admin created Task",
+    "description": "This is a admin created test task",
     "priority": "high",
     "status": "open",
-    "_id": "66c8c93f0665adb5cbbebed2",
-    "createdAt": "2024-08-23T17:39:11.115Z",
-    "updatedAt": "2024-08-23T17:39:11.115Z",
-    "__v": 0
+    "assignedTo": "66c8cfce0120fb9d2e44ecea",
+    "_id": "66c8d59b233f8bf670287570",
   }
 }
 ##
 
 ## updateTaskByTaskId :- http://localhost:8080/api/v1/task/update/66c8ccd40f5339b9ef3da0eb
-##
+## Patch-Request
   body :- {
      "title": "Test Task 2",
     "description": "This is a test task",
     "priority": "high",
     "status": "in-progress",
   }
-##
+  
+## Get-Requests :-
+
 ## getByTaskId api :- http://localhost:8080/api/v1/task/get/66c8ccd40f5339b9ef3da0eb
 ## getFilteredTask api: - http://localhost:8080/api/v1/task/get/?priority=high&status=open
 
-
 ## Only-Admin-Delete-RoleBased Auth Check :-
-## login with admin credential :- Provided above please check
+login with admin credential :- Provided above please check
+## Delete-Request
 ## api :- http://localhost:8080/api/v1/task/delete/66c8ccd40f5339b9ef3da0eb
