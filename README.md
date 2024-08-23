@@ -31,11 +31,10 @@
 }
 ##
 
-
 ## login-user
 ## api :- http://localhost:8080/api/v1/user/login
 
-## testData :
+## body :
 ## user        
  {
  "email": "user@gmail.com",
@@ -87,12 +86,13 @@ response :-
     "priority": "high",
     "status": "in-progress",
   }
-## get requests :-
+  
+## Get-Requests :-
+
 ## getByTaskId api :- http://localhost:8080/api/v1/task/get/66c8ccd40f5339b9ef3da0eb
 ## getFilteredTask api: - http://localhost:8080/api/v1/task/get/?priority=high&status=open
 
-
 ## Only-Admin-Delete-RoleBased Auth Check :-
-## login with admin credential :- Provided above please check
+login with admin credential :- Provided above please check
 ## Delete-Request
 ## api :- http://localhost:8080/api/v1/task/delete/66c8ccd40f5339b9ef3da0eb
